@@ -1,0 +1,11 @@
+When creating new components, stick to our styles present in other components. You can check them in SOP/styles.md.
+If we have more than 300 lines of code, I think it makes sense to consider separating some logical block into a different file in the same folder.
+Organize the code into logical functions.
+Use descriptive variable names.
+Add comments to explain the code when necessary.
+Use consistent naming conventions for variables, functions, and components.
+Use consistent spacing and indentation.
+Use consistent quotes (single or double) throughout the code.
+Use consistent line breaks (LF or CRLF) in the code.
+Use add-comments.md prompt to add comments to the new code you are writing.
+Never delete any comments when you are editing code.
