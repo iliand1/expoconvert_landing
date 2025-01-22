@@ -4,7 +4,7 @@ import { Coffee, FileSignature, Clock, Users, Lightbulb, UserCheck, Rocket, Grad
 import Link from 'next/link';
 
 const roadmapSteps = [
-  { icon: Coffee, title: "Discovery Session", description: "Let's chat about your goals over a virtual coffee.", timing: "Day 1", link: "https://calendly.com/denis_burkatksiy/30min" },
+  { icon: Coffee, title: "Discovery Session", description: "Let's chat about your goals over a virtual coffee.", timing: "Day 1", link: "https://calendly.com/alxndalxnd/40min" },
   { icon: FileSignature, title: "Sign Contract", description: "Quick paperwork to kick things off.", timing: "Day 2-3" },
   { icon: Clock, title: "5 Days of Setup", description: "Prepare your outreach infrastructure.", timing: "Week 1" },
   { icon: Users, title: "LinkedIn Profile Boost", description: "Warm up your LinkedIn presence.", timing: "Week 1-2" },

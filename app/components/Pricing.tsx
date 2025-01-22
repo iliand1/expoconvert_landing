@@ -39,7 +39,7 @@ const Pricing: React.FC = () => {
             <CardFooter className="mt-auto flex flex-col items-center">
               <Button 
                 className="text-sm sm:text-base lg:text-lg py-3 sm:py-4 px-3 sm:px-4 flex items-center bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 hover:from-blue-600 hover:via-indigo-600 hover:to-purple-700 transition-all duration-200 text-white font-semibold mb-4 w-full justify-center" 
-                onClick={() => window.open('https://calendly.com/denis_burkatksiy/30min', '_blank')}
+                onClick={() => window.open('https://calendly.com/alxndalxnd/40min', '_blank')}
               >
                 <span className="whitespace-normal text-center">Book Discovery Session</span>
                 <Rocket className="ml-2 h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />

@@ -47,7 +47,7 @@ const FinalVision: React.FC = () => {
           <Button 
             size="lg" 
             className="text-lg px-8 py-4 flex items-center bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 hover:from-blue-600 hover:via-indigo-600 hover:to-purple-700 transition-all duration-200 text-white font-semibold"
-            onClick={() => window.open('https://calendly.com/denis_burkatksiy/30min', '_blank')}
+            onClick={() => window.open('https://calendly.com/alxndalxnd/40min', '_blank')}
           >
             Let's map out your next expo <Rocket className="ml-2 h-4 w-4" />
           </Button>
