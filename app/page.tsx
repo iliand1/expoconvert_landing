@@ -21,6 +21,7 @@ import FeaturesPipeline from './components/FeaturesPipeline';
 import AuthorityBlock from './components/AuthorityBlock';
 import ProblemSolution from './components/ProblemSolution';
 import ProcessSteps from './components/ProcessSteps';
+import FinalVision from './components/FinalVision';
 
 export default function LandingPage() {
   return (
@@ -32,6 +33,8 @@ export default function LandingPage() {
       <ProblemSolution />
       <Separator className="my-8" />
       <ProcessSteps />
+      <Separator className="my-8" />
+      <FinalVision />
       <Separator className="my-8" />
       <Comparison />
       <Separator className="my-8" />
