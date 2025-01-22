@@ -22,6 +22,7 @@ import AuthorityBlock from './components/AuthorityBlock';
 import ProblemSolution from './components/ProblemSolution';
 import ProcessSteps from './components/ProcessSteps';
 import FinalVision from './components/FinalVision';
+import HesitantSection from './components/HesitantSection';
 
 export default function LandingPage() {
   return (
@@ -35,6 +36,8 @@ export default function LandingPage() {
       <ProcessSteps />
       <Separator className="my-8" />
       <FinalVision />
+      <Separator className="my-8" />
+      <HesitantSection />
       <Separator className="my-8" />
       <Comparison />
       <Separator className="my-8" />
