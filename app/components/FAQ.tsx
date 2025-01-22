@@ -8,25 +8,29 @@ const FAQ: React.FC = () => {
       <div className="max-w-3xl mx-auto px-6 sm:px-8">
         <div className="flex items-center justify-center mb-4">
           <Zap className="w-8 h-8 text-foreground mr-3" />
-          <h2 className="text-3xl font-extrabold text-foreground text-center">Doubt Destroyer Deluxe</h2>
+          <h2 className="text-3xl font-extrabold text-foreground text-center">FAQ</h2>
         </div>
         <Accordion type="single" collapsible className="w-full">
           {[
             { 
-              objection: "This sounds too good to be true. What's the catch?", 
-              response: "The catch is you'll have to find a new excuse for not hitting your sales targets. We're eliminating the 'it's too expensive' and 'I don't know how' barriers. The rest is on you, champ."
+              objection: "How does XPOIQ help me maximize ROI from expos?", 
+              response: "XPOIQ ensures every dollar you invest drives measurable results. From pre-event lead qualification and meeting scheduling to real-time data collection and post-event follow-ups, our system tracks every lead and conversation. You'll know exactly which prospects deliver the biggest wins—no guesswork, just actionable insights."
             },
             { 
-              objection: "I've been burned by agencies before. Why are you different?", 
-              response: "We're not an agency, we're your personal Yoda. We teach you the ways of the Force (aka LinkedIn outreach), set up your lightsaber (tools), and then let you become the Jedi master. No ongoing fees, no dependency."
+              objection: "Will my team still need to manually input business cards and lead data?", 
+              response: "Not at all. Our web app digitizes business cards instantly and syncs the information directly into your CRM. You can also add voice memos or quick notes, which are automatically parsed and organized, saving your team hours of tedious admin work."
             },
             { 
-              objection: "What if it doesn't work for my industry?", 
-              response: "Unless you're selling air to trees, we've got you covered. Our system is adaptable to virtually any B2B scenario. If it doesn't work, we'll eat our keyboards. (Terms and conditions apply, keyboards may be gummy.)"
+              objection: "How does XPOIQ ensure no leads fall through the cracks?", 
+              response: "Our airtight follow-up system keeps leads warm with automated sequences and reminders. Every prospect is accounted for and nurtured, so your sales team can focus on closing deals instead of chasing cold leads."
             },
             { 
-              objection: "I'm not tech-savvy. Will I be able to handle this?", 
-              response: "If you can operate a toaster, you can handle our system. We've made it so user-friendly, even your technophobe uncle could do it. (You know, the one who still uses a flip phone.)"
+              objection: "What happens before the expo?", 
+              response: "We start 2-3 weeks in advance, helping you identify and qualify high-value prospects using advanced scraping techniques. We also assist in scheduling pre-event meetings and warming up key accounts, so you walk into the expo with a plan and a pipeline."
+            },
+            { 
+              objection: "Is this suitable for my industry or company size?", 
+              response: "Absolutely. XPOIQ is designed to work for any B2B company that invests in expos as part of their lead generation strategy. Whether you're a startup or an established enterprise, our systems adapt to your needs and scale with your goals."
             },
           ].map((item, index) => (
             <AccordionItem key={index} value={`item-${index}`}>

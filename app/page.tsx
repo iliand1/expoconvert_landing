@@ -18,13 +18,17 @@ import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import ROICalculator from './components/ROICalculator';
 import FeaturesPipeline from './components/FeaturesPipeline';
-import ProblemCards from './components/ProblemCards';
+import AuthorityBlock from './components/AuthorityBlock';
+import ProblemSolution from './components/ProblemSolution';
 
 export default function LandingPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navigation />
       <Hero />
+      <AuthorityBlock />
+      <Separator className="my-8" />
+      <ProblemSolution />
       <Separator className="my-8" />
       <Comparison />
       <Separator className="my-8" />
@@ -35,10 +39,6 @@ export default function LandingPage() {
         <ArrowDown className="text-primary w-12 h-12 animate-bounce" />
       </div>
       <Roadmap />      
-      <Separator className="my-8" />
-      <div id="challenges">
-        <ProblemCards />
-      </div>
       <Separator className="my-8" />
       <div id="testimonials">
         <WallOfLove />
