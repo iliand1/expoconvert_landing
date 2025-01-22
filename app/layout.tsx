@@ -10,8 +10,8 @@ import Script from 'next/script';
 const montserrat = Montserrat({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "TNG - One-Time Fee Cold LinkedIn Outreach Setup",
-  description: "Transform your B2B sales with TNG's in-house department setup for cold LinkedIn outreach. One-time fee, lifetime independence.",
+  title: "XPOIQ - One-Time Fee Cold LinkedIn Outreach Setup",
+  description: "Transform your B2B sales with XPOIQ's in-house department setup for cold LinkedIn outreach. One-time fee, lifetime independence.",
   icons: {
     icon: "/favicon.ico",
   },
