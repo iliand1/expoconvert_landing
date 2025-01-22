@@ -20,6 +20,7 @@ import ROICalculator from './components/ROICalculator';
 import FeaturesPipeline from './components/FeaturesPipeline';
 import AuthorityBlock from './components/AuthorityBlock';
 import ProblemSolution from './components/ProblemSolution';
+import ProcessSteps from './components/ProcessSteps';
 
 export default function LandingPage() {
   return (
@@ -29,6 +30,8 @@ export default function LandingPage() {
       <AuthorityBlock />
       <Separator className="my-8" />
       <ProblemSolution />
+      <Separator className="my-8" />
+      <ProcessSteps />
       <Separator className="my-8" />
       <Comparison />
       <Separator className="my-8" />
