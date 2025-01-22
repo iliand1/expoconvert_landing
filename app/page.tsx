@@ -39,6 +39,10 @@ export default function LandingPage() {
       <Separator className="my-8" />
       <HesitantSection />
       <Separator className="my-8" />
+      <div id="faq">
+        <FAQ />
+      </div>
+      <Separator className="my-8" />
       <Comparison />
       <Separator className="my-8" />
       <StaticComparisonGraph />
@@ -62,10 +66,6 @@ export default function LandingPage() {
       </div>
       <Separator className="my-8" />
       <AboutUs />
-      <Separator className="my-8" />
-      <div id="faq">
-        <FAQ />
-      </div>
       <Separator className="my-8" />
       <InvestOnce />
       <Separator className="my-8" />
