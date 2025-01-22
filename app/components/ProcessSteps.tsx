@@ -21,7 +21,6 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
   title,
   subtitle,
   bullets,
-  imageSrc,
   position,
   number
 }) => {
