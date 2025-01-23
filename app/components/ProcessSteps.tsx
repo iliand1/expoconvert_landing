@@ -48,6 +48,18 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
               );
             })}
           </ul>
+          <div className="mt-6 flex flex-col items-center">
+            <Button 
+              size="lg" 
+              className="text-lg px-8 py-4 flex items-center bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 hover:from-blue-600 hover:via-indigo-600 hover:to-purple-700 transition-all duration-200 text-white font-semibold"
+              onClick={() => window.open('https://calendly.com/alxndalxnd/40min', '_blank')}
+            >
+              Get my discovery call <Rocket className="ml-2 h-4 w-4" />
+            </Button>
+            <p className="mt-3 text-sm text-muted-foreground">
+              (no sales involved, just a friendly chat)
+            </p>
+          </div>
         </CardContent>
       </Card>
     </div>
@@ -76,8 +88,8 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
         </>
       )}
       {/* Step indicator */}
-      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-primary rounded-full items-center justify-center sm:left-1/2 sm:-ml-4 hidden sm:flex">
-        <span className="text-primary-foreground font-bold">{number}</span>
+      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-foreground rounded-full items-center justify-center sm:left-1/2 sm:-ml-4 hidden sm:flex">
+        <span className="text-background font-bold">{number}</span>
       </div>
     </div>
   );
@@ -179,20 +191,6 @@ const ProcessSteps: React.FC = () => {
               />
             ))}
           </div>
-        </div>
-
-        {/* CTA */}
-        <div className="mt-16 flex flex-col items-center">
-          <Button 
-            size="lg" 
-            className="text-lg px-8 py-4 flex items-center bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 hover:from-blue-600 hover:via-indigo-600 hover:to-purple-700 transition-all duration-200 text-white font-semibold"
-            onClick={() => window.open('https://calendly.com/alxndalxnd/40min', '_blank')}
-          >
-            Get my discovery call <Rocket className="ml-2 h-4 w-4" />
-          </Button>
-          <p className="mt-3 text-sm text-muted-foreground">
-            (no sales involved, just a friendly chat)
-          </p>
         </div>
       </div>
     </section>
