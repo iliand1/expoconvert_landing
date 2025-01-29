@@ -1,6 +1,7 @@
 import React from 'react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./ui/accordion";
-import { Zap } from 'lucide-react';
+import { Zap, Rocket } from 'lucide-react';
+import { Button } from "./ui/button";
 
 const FAQ: React.FC = () => {
   return (
@@ -34,15 +35,28 @@ const FAQ: React.FC = () => {
             },
           ].map((item, index) => (
             <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger className="text-left text-primary-foreground hover:text-primary-foreground/80">
+              <AccordionTrigger className="text-left text-lg sm:text-xl text-primary-foreground hover:text-primary-foreground/80">
                 {item.objection}
               </AccordionTrigger>
-              <AccordionContent className="text-foreground">
+              <AccordionContent className="text-base sm:text-lg text-foreground">
                 {item.response}
               </AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
+
+        <div className="mt-16 flex flex-col items-center">
+          <Button 
+            size="lg" 
+            className="text-lg px-8 py-4 flex items-center bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 hover:from-blue-600 hover:via-indigo-600 hover:to-purple-700 transition-all duration-200 text-white font-semibold"
+            onClick={() => window.open('https://calendly.com/alxndalxnd/40min', '_blank')}
+          >
+            Let's map out your next expo <Rocket className="ml-2 h-4 w-4" />
+          </Button>
+          <p className="mt-3 text-sm text-muted-foreground">
+            (no pressure, just insights)
+          </p>
+        </div>
       </div>
     </div>
   );
