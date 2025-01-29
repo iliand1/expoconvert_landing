@@ -21,11 +21,17 @@ export default function LandingPage() {
       <Hero />
       <AuthorityBlock />
       <Separator className="my-8" />
-      <ProblemSolution />
+      <div id="solution">
+        <ProblemSolution />
+      </div>
       <Separator className="my-8" />
-      <ProcessSteps />
+      <div id="process">
+        <ProcessSteps />
+      </div>
       <Separator className="my-8" />
-      <FinalVision />
+      <div id="vision">
+        <FinalVision />
+      </div>
       <Separator className="my-8" />
       <HesitantSection />
       <Separator className="my-8" />
