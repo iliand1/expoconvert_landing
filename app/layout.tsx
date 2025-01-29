@@ -7,8 +7,8 @@ import Script from 'next/script';
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "XPOIQ - One-Time Fee Cold LinkedIn Outreach Setup",
-  description: "Transform your B2B sales with XPOIQ's in-house department setup for cold LinkedIn outreach. One-time fee, lifetime independence.",
+  title: "Turn expos into your #1 sales channel | XPOIQ",
+  description: "Forget CRM chaos. Forget missed leads. Just results, on autopilot.",
   icons: {
     icon: "/favicon.ico",
   },
