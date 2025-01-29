@@ -5,10 +5,11 @@ const AuthorityBlock: React.FC = () => {
   const partners = [
     { name: '22', logo: '/client_logo/22.png' },
     { name: '1001', logo: '/client_logo/1001.png' },
-    { name: 'Converted Image', logo: '/client_logo/converted_image.png' },
-    { name: 'Group 138', logo: '/client_logo/Group_138 (1).png' },
+    { name: 'BeAKid', logo: '/client_logo/beakid.png' },
+    { name: 'Labelants', logo: '/client_logo/label_ants_black_text.png' },
     { name: 'Metric', logo: '/client_logo/metric.png' },
-    { name: 'Robotmia', logo: '/client_logo/robotmialogo-ffffff-p-500.png' },
+    { name: 'Robotmia', logo: '/client_logo/robotmialogo-black text.png' },
+    { name: 'You are a legend', logo: '/client_logo/you_are_a_legend.png' },
   ];
 
   return (
@@ -17,7 +18,7 @@ const AuthorityBlock: React.FC = () => {
         <p className="text-center text-sm font-medium text-muted-foreground mb-8">
           Trusted by industry leaders
         </p>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 items-center justify-items-center">
           {partners.map((partner, index) => (
             <div 
               key={index}
