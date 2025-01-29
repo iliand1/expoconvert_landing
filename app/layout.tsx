@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google"
+import { Inter, Poppins } from "next/font/google"
 import "./globals.css";
 import { ThemeProvider } from "./components/ThemeSwitcher/theme-provider"
 import Script from 'next/script';
 
 const inter = Inter({ subsets: ["latin"] })
+const poppins = Poppins({ 
+  weight: ['800'],
+  subsets: ['latin'],
+  variable: '--font-poppins',
+});
 
 export const metadata: Metadata = {
   title: "Turn expos into your #1 sales channel | XPOIQ",
@@ -20,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className="light">
+    <html lang="en" suppressHydrationWarning className={`${poppins.variable} light`}>
       <head>
         <Script id="google-tag-manager" strategy="afterInteractive">
           {`

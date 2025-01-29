@@ -13,6 +13,10 @@
     scroll-behavior: smooth;
   }
 
+  h1, h2, h3 {
+    font-family: var(--font-poppins);
+  }
+
   :root {
     --background: 210 20% 98%;      /* #F8F9FA */
     --foreground: 0 0% 0%;          /* Black */
