@@ -13,7 +13,7 @@ const AuthorityBlock: React.FC = () => {
   ];
 
   return (
-    <div className="py-12 bg-background/50">
+    <div className="pt-16 pb-24 bg-background/50">
       <div className="max-w-6xl mx-auto px-6 sm:px-8">
         <p className="text-center text-sm font-medium text-muted-foreground mb-8">
           Trusted by industry leaders
