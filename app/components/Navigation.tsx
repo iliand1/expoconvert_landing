@@ -16,6 +16,23 @@ const Navigation: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offset = 80; // Adjust this value based on your navbar height
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <nav className={`${isScrolled ? 'bg-[#0E0E13]/90 shadow-md' : 'bg-[#0E0E13]'} sticky top-0 z-40 transition-all duration-300`}>
       <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
@@ -25,16 +42,32 @@ const Navigation: React.FC = () => {
             <span className="text-lg font-bold text-white">XPOIQ</span>
           </Link>
           <div className="hidden md:flex flex-grow items-center space-x-2 overflow-x-auto">
-            <Link href="/#solution" className="text-sm text-gray-300 hover:text-primary-foreground transition-colors px-3 py-2">
+            <Link 
+              href="/#solution" 
+              onClick={(e) => scrollToSection(e, 'solution')}
+              className="text-sm text-gray-300 hover:text-primary-foreground transition-colors px-3 py-2"
+            >
               Solution
             </Link>
-            <Link href="/#process" className="text-sm text-gray-300 hover:text-primary-foreground transition-colors px-3 py-2">
+            <Link 
+              href="/#process" 
+              onClick={(e) => scrollToSection(e, 'process')}
+              className="text-sm text-gray-300 hover:text-primary-foreground transition-colors px-3 py-2"
+            >
               Process
             </Link>
-            <Link href="/#vision" className="text-sm text-gray-300 hover:text-primary-foreground transition-colors px-3 py-2">
+            <Link 
+              href="/#vision" 
+              onClick={(e) => scrollToSection(e, 'vision')}
+              className="text-sm text-gray-300 hover:text-primary-foreground transition-colors px-3 py-2"
+            >
               Vision
             </Link>
-            <Link href="/#faq" className="text-sm text-gray-300 hover:text-primary-foreground transition-colors px-3 py-2">
+            <Link 
+              href="/#faq" 
+              onClick={(e) => scrollToSection(e, 'faq')}
+              className="text-sm text-gray-300 hover:text-primary-foreground transition-colors px-3 py-2"
+            >
               FAQ
             </Link>
           </div>

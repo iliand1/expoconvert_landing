@@ -9,6 +9,10 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   :root {
     --background: 210 20% 98%;      /* #F8F9FA */
     --foreground: 0 0% 0%;          /* Black */
