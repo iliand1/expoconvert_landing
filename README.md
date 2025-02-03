@@ -8,3 +8,5 @@ GET votes
 
 ##How to reset the votes:
 EVAL "local votes = cjson.decode(redis.call('GET', 'votes') or '{}'); for k,v in pairs(votes) do votes[k] = {painVotes=0, mehVotes=0} end; redis.call('SET', 'votes', cjson.encode(votes)); return 'OK'" 0
+
+sm
