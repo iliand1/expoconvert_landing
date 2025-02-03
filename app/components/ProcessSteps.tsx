@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
+import Image from 'next/image';
 import { 
   Rocket, Calendar, Tablet, Target,
   Search, Bot, Handshake,
@@ -21,11 +22,12 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
   title,
   subtitle,
   bullets,
+  imageSrc,
   position,
   number
 }) => {
   const ContentSide = (
-    <div className={`w-full sm:w-1/2 ${position === 'right' ? 'sm:pl-8' : 'sm:pr-8'}`}>
+    <div className="w-full sm:w-1/2">
       <Card className="card">
         <CardHeader>
           <CardTitle className="text-2xl font-bold">{title}</CardTitle>
@@ -66,16 +68,21 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
   );
 
   const ImageSide = (
-    <div className={`hidden sm:block w-full sm:w-1/2 ${position === 'right' ? 'sm:pr-8' : 'sm:pl-8'}`}>
-      <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
-        {/* Placeholder for actual image */}
-        <span className="text-4xl">🖼️</span>
+    <div className="hidden sm:block w-full sm:w-1/2">
+      <div className="aspect-[4/3] bg-background rounded-lg flex items-center justify-center relative overflow-hidden">
+        <Image
+          src={imageSrc}
+          alt={title}
+          fill
+          className="object-contain"
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
       </div>
     </div>
   );
 
   return (
-    <div className={`relative sm:flex sm:items-center ${position === 'right' ? 'sm:justify-end' : ''}`}>
+    <div className={`relative sm:flex sm:items-center ${position === 'right' ? 'sm:justify-end' : ''} gap-8`}>
       {position === 'left' ? (
         <>
           {ContentSide}
@@ -117,7 +124,7 @@ const ProcessSteps: React.FC = () => {
           icon: Handshake
         }
       ],
-      imageSrc: "/images/pre-event.png",
+      imageSrc: "/screenshots/lead_scoring.png",
       icon: Calendar
     },
     {
@@ -163,7 +170,7 @@ const ProcessSteps: React.FC = () => {
           icon: DollarSign
         }
       ],
-      imageSrc: "/images/post-event.png",
+      imageSrc: "/screenshots/saas_unibox.png",
       icon: Target
     }
   ];
@@ -175,7 +182,7 @@ const ProcessSteps: React.FC = () => {
         
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-4 top-0 bottom-0 w-1 bg-primary sm:left-1/2 sm:-ml-0.5 hidden sm:block"></div>
+          <div className="absolute left-4 top-0 bottom-0 w-[2px] bg-primary sm:left-1/2 sm:-ml-[1px] hidden sm:block"></div>
           
           {/* Steps */}
           <div className="space-y-16">
