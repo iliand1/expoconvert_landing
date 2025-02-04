@@ -16,6 +16,7 @@ interface ProcessStepProps {
   imageSrc: string;
   position: 'left' | 'right';
   number: number;
+  imageDescription: string;
 }
 
 const ProcessStep: React.FC<ProcessStepProps> = ({
@@ -24,7 +25,8 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
   bullets,
   imageSrc,
   position,
-  number
+  number,
+  imageDescription
 }) => {
   const ContentSide = (
     <div className="w-full sm:w-1/2">
@@ -72,7 +74,7 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
       <div className="aspect-[3/4] bg-background rounded-lg flex items-center justify-center relative overflow-hidden p-8">
         <Image
           src={imageSrc}
-          alt={title}
+          alt={`${title} - Step ${number} of XPOIQ's expo lead management process. ${imageDescription}`}
           fill
           className="object-contain scale-100"
           sizes="(max-width: 768px) 100vw, 50vw"
@@ -125,6 +127,7 @@ const ProcessSteps: React.FC = () => {
         }
       ],
       imageSrc: "/screenshots/lead_scoring.png",
+      imageDescription: "XPOIQ's intelligent lead scoring dashboard showing prospect qualification and prioritization for expo success",
       icon: Calendar
     },
     {
@@ -147,7 +150,8 @@ const ProcessSteps: React.FC = () => {
           icon: Pencil
         }
       ],
-      imageSrc: "/screenshots/iphone_app.png",
+      imageSrc: "/screenshots/iphone_no_bg.png",
+      imageDescription: "XPOIQ's mobile app interface showcasing business card scanning and voice memo features for effortless lead capture at expos",
       icon: Tablet
     },
     {
@@ -171,6 +175,7 @@ const ProcessSteps: React.FC = () => {
         }
       ],
       imageSrc: "/screenshots/saas_unibox.png",
+      imageDescription: "XPOIQ's unified inbox and automation dashboard for streamlined post-expo lead follow-up and deal closing",
       icon: Target
     }
   ];
@@ -195,6 +200,7 @@ const ProcessSteps: React.FC = () => {
                 imageSrc={step.imageSrc}
                 position={index % 2 === 0 ? 'left' : 'right'}
                 number={index + 1}
+                imageDescription={step.imageDescription}
               />
             ))}
           </div>

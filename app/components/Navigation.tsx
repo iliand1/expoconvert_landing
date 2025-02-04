@@ -38,7 +38,7 @@ const Navigation: React.FC = () => {
       <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
         <div className="flex items-center h-16">
           <Link href="/" className="flex items-center mr-8">
-            <Image src="/expoiq_logo.jpg" alt="XPOIQ Logo" width={32} height={32} className="mr-2" />
+            <Image src="/expoiq_logo.jpg" alt="XPOIQ - Expo Lead Management and Sales Automation Platform" width={32} height={32} className="mr-2" />
             <span className="text-lg font-bold text-white">XPOIQ</span>
           </Link>
           <div className="hidden md:flex flex-grow items-center space-x-2 overflow-x-auto">
