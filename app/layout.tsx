@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: "Turn expos into your #1 sales channel | XPOIQ",
   description: "Forget CRM chaos. Forget missed leads. Just results, on autopilot.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.png",
   },
 };
 
