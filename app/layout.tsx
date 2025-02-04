@@ -15,7 +15,35 @@ export const metadata: Metadata = {
   title: "Turn expos into your #1 sales channel | XPOIQ",
   description: "Forget CRM chaos. Forget missed leads. Just results, on autopilot.",
   icons: {
-    icon: "/favicon.png",
+    icon: [
+      {
+        url: '/favicon-16x16.png',
+        sizes: '16x16',
+        type: 'image/png'
+      },
+      {
+        url: '/favicon-32x32.png',
+        sizes: '32x32',
+        type: 'image/png'
+      },
+      {
+        url: '/favicon-48x48.png',
+        sizes: '48x48',
+        type: 'image/png'
+      },
+      {
+        url: '/favicon-192x192.png',
+        sizes: '192x192',
+        type: 'image/png'
+      },
+      {
+        url: '/favicon-256x256.png',
+        sizes: '256x256',
+        type: 'image/png'
+      }
+    ],
+    shortcut: '/favicon.png',
+    apple: '/favicon-192x192.png',
   },
 };
 

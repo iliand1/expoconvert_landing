@@ -6,8 +6,12 @@ img = Image.open('public/expoiq_logo.jpg')
 # Convert to RGBA if it isn't already
 img = img.convert('RGBA')
 
-# Resize to 48x48 with high quality
-img_resized = img.resize((48, 48), Image.Resampling.LANCZOS)
+# Create multiple sizes
+sizes = [16, 32, 48, 64, 96, 128, 192, 256]
+for size in sizes:
+    img_resized = img.resize((size, size), Image.Resampling.LANCZOS)
+    img_resized.save(f'public/favicon-{size}x{size}.png', 'PNG')
 
-# Save as PNG
-img_resized.save('public/favicon.png', 'PNG') 
+# Also save the 32x32 as the default favicon.png
+img_32 = img.resize((32, 32), Image.Resampling.LANCZOS)
+img_32.save('public/favicon.png', 'PNG') 
