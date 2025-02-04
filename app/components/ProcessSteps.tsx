@@ -69,12 +69,12 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
 
   const ImageSide = (
     <div className="hidden sm:block w-full sm:w-1/2">
-      <div className="aspect-[4/3] bg-background rounded-lg flex items-center justify-center relative overflow-hidden">
+      <div className="aspect-[3/4] bg-background rounded-lg flex items-center justify-center relative overflow-hidden p-8">
         <Image
           src={imageSrc}
           alt={title}
           fill
-          className="object-contain"
+          className="object-contain scale-100"
           sizes="(max-width: 768px) 100vw, 50vw"
         />
       </div>
@@ -147,7 +147,7 @@ const ProcessSteps: React.FC = () => {
           icon: Pencil
         }
       ],
-      imageSrc: "/images/during-event.png",
+      imageSrc: "/screenshots/iphone_app.png",
       icon: Tablet
     },
     {
