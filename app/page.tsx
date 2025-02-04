@@ -1,18 +1,23 @@
 'use client';
 
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Separator } from './components/ui/separator';
 
-// Import only used components
+// Import critical above-the-fold components normally
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import AuthorityBlock from './components/AuthorityBlock';
-import ProblemSolution from './components/ProblemSolution';
-import ProcessSteps from './components/ProcessSteps';
-import FinalVision from './components/FinalVision';
-import HesitantSection from './components/HesitantSection';
-import FAQ from './components/FAQ';
-import Footer from './components/Footer';
+
+// Lazy load below-the-fold components
+const ProblemSolution = lazy(() => import('./components/ProblemSolution'));
+const ProcessSteps = lazy(() => import('./components/ProcessSteps'));
+const FinalVision = lazy(() => import('./components/FinalVision'));
+const HesitantSection = lazy(() => import('./components/HesitantSection'));
+const FAQ = lazy(() => import('./components/FAQ'));
+const Footer = lazy(() => import('./components/Footer'));
+
+// Loading fallback component
+const LoadingFallback = () => <div className="min-h-[200px] flex items-center justify-center">Loading...</div>;
 
 export default function LandingPage() {
   return (
@@ -22,24 +27,36 @@ export default function LandingPage() {
       <AuthorityBlock />
       <Separator className="my-8" />
       <div id="solution">
-        <ProblemSolution />
+        <Suspense fallback={<LoadingFallback />}>
+          <ProblemSolution />
+        </Suspense>
       </div>
       <Separator className="my-8" />
       <div id="process">
-        <ProcessSteps />
+        <Suspense fallback={<LoadingFallback />}>
+          <ProcessSteps />
+        </Suspense>
       </div>
       <Separator className="my-8" />
       <div id="vision">
-        <FinalVision />
+        <Suspense fallback={<LoadingFallback />}>
+          <FinalVision />
+        </Suspense>
       </div>
       <Separator className="my-8" />
-      <HesitantSection />
+      <Suspense fallback={<LoadingFallback />}>
+        <HesitantSection />
+      </Suspense>
       <Separator className="my-8" />
       <div id="faq">
-        <FAQ />
+        <Suspense fallback={<LoadingFallback />}>
+          <FAQ />
+        </Suspense>
       </div>
       <Separator className="my-8" />
-      <Footer />
+      <Suspense fallback={<LoadingFallback />}>
+        <Footer />
+      </Suspense>
     </div>
   );
 }

@@ -78,6 +78,7 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
           fill
           className="object-contain scale-100"
           sizes="(max-width: 768px) 100vw, 50vw"
+          quality={85}
         />
       </div>
     </div>
