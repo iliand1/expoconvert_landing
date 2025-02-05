@@ -4,11 +4,18 @@ import "./globals.css";
 import { ThemeProvider } from "./components/ThemeSwitcher/theme-provider"
 import Script from 'next/script';
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ 
+  subsets: ["latin"],
+  display: 'swap',
+  preload: true,
+})
+
 const poppins = Poppins({ 
   weight: ['800'],
   subsets: ['latin'],
   variable: '--font-poppins',
+  display: 'swap',
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -45,6 +52,12 @@ export const metadata: Metadata = {
     shortcut: '/favicon.png',
     apple: '/favicon-192x192.png',
   },
+  viewport: 'width=device-width, initial-scale=1',
+  themeColor: '#ffffff',
+  other: {
+    'apple-mobile-web-app-capable': 'yes',
+    'mobile-web-app-capable': 'yes',
+  }
 };
 
 export default function RootLayout({

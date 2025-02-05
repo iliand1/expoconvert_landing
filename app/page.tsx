@@ -8,16 +8,60 @@ import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import AuthorityBlock from './components/AuthorityBlock';
 
-// Lazy load below-the-fold components
-const ProblemSolution = lazy(() => import('./components/ProblemSolution'));
-const ProcessSteps = lazy(() => import('./components/ProcessSteps'));
-const FinalVision = lazy(() => import('./components/FinalVision'));
-const HesitantSection = lazy(() => import('./components/HesitantSection'));
+// Group related components for better code splitting
+const MainContent = lazy(() => Promise.all([
+  import('./components/ProblemSolution'),
+  import('./components/ProcessSteps')
+]).then(([problemSolution, processSteps]) => {
+  const CombinedComponent = () => (
+    <>
+      <problemSolution.default />
+      <Separator className="my-8" />
+      <processSteps.default />
+    </>
+  );
+  return { default: CombinedComponent };
+}));
+
+const SecondaryContent = lazy(() => Promise.all([
+  import('./components/FinalVision'),
+  import('./components/HesitantSection')
+]).then(([finalVision, hesitantSection]) => {
+  const CombinedComponent = () => (
+    <>
+      <finalVision.default />
+      <Separator className="my-8" />
+      <hesitantSection.default />
+    </>
+  );
+  return { default: CombinedComponent };
+}));
+
 const FAQ = lazy(() => import('./components/FAQ'));
 const Footer = lazy(() => import('./components/Footer'));
 
-// Loading fallback component
-const LoadingFallback = () => <div className="min-h-[200px] flex items-center justify-center">Loading...</div>;
+// Skeleton loaders that match component dimensions
+const MainContentLoader = () => (
+  <div className="space-y-8 animate-pulse">
+    <div className="h-[400px] bg-gray-200 rounded-lg" />
+    <div className="h-[600px] bg-gray-200 rounded-lg" />
+  </div>
+);
+
+const SecondaryContentLoader = () => (
+  <div className="space-y-8 animate-pulse">
+    <div className="h-[300px] bg-gray-200 rounded-lg" />
+    <div className="h-[400px] bg-gray-200 rounded-lg" />
+  </div>
+);
+
+const FAQLoader = () => (
+  <div className="h-[400px] bg-gray-200 rounded-lg animate-pulse" />
+);
+
+const FooterLoader = () => (
+  <div className="h-[200px] bg-gray-200 rounded-lg animate-pulse" />
+);
 
 export default function LandingPage() {
   return (
@@ -26,35 +70,28 @@ export default function LandingPage() {
       <Hero />
       <AuthorityBlock />
       <Separator className="my-8" />
-      <div id="solution">
-        <Suspense fallback={<LoadingFallback />}>
-          <ProblemSolution />
+      
+      <div id="main-content">
+        <Suspense fallback={<MainContentLoader />}>
+          <MainContent />
         </Suspense>
       </div>
-      <Separator className="my-8" />
-      <div id="process">
-        <Suspense fallback={<LoadingFallback />}>
-          <ProcessSteps />
+      
+      <div id="secondary-content">
+        <Suspense fallback={<SecondaryContentLoader />}>
+          <SecondaryContent />
         </Suspense>
       </div>
-      <Separator className="my-8" />
-      <div id="vision">
-        <Suspense fallback={<LoadingFallback />}>
-          <FinalVision />
-        </Suspense>
-      </div>
-      <Separator className="my-8" />
-      <Suspense fallback={<LoadingFallback />}>
-        <HesitantSection />
-      </Suspense>
+      
       <Separator className="my-8" />
       <div id="faq">
-        <Suspense fallback={<LoadingFallback />}>
+        <Suspense fallback={<FAQLoader />}>
           <FAQ />
         </Suspense>
       </div>
+      
       <Separator className="my-8" />
-      <Suspense fallback={<LoadingFallback />}>
+      <Suspense fallback={<FooterLoader />}>
         <Footer />
       </Suspense>
     </div>
