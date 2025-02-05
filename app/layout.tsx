@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Poppins } from "next/font/google"
 import "./globals.css";
 import { ThemeProvider } from "./components/ThemeSwitcher/theme-provider"
@@ -17,6 +17,12 @@ const poppins = Poppins({
   display: 'swap',
   preload: true,
 });
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#ffffff',
+};
 
 export const metadata: Metadata = {
   title: "Turn expos into your #1 sales channel | XPOIQ",
@@ -52,8 +58,6 @@ export const metadata: Metadata = {
     shortcut: '/favicon.png',
     apple: '/favicon-192x192.png',
   },
-  viewport: 'width=device-width, initial-scale=1',
-  themeColor: '#ffffff',
   other: {
     'apple-mobile-web-app-capable': 'yes',
     'mobile-web-app-capable': 'yes',
