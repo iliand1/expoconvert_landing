@@ -56,16 +56,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className={`${poppins.variable} light`}>
       <head />
       <body className={inter.className}>
-        <Script 
-          id="google-tag-manager" 
-          strategy="worker"
-          src={`https://www.googletagmanager.com/gtm.js?id=GTM-PSJJG42S`}
-        />
-        <noscript>
-          <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSJJG42S"
-            height="0" width="0" style={{display:'none',visibility:'hidden'}}></iframe>
-        </noscript>
-        <Script id="gtm-config" strategy="worker">
+        <Script id="gtm-config" strategy="beforeInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
@@ -74,6 +65,15 @@ export default function RootLayout({
             });
           `}
         </Script>
+        <Script 
+          id="google-tag-manager" 
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtm.js?id=GTM-PSJJG42S`}
+        />
+        <noscript>
+          <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSJJG42S"
+            height="0" width="0" style={{display:'none',visibility:'hidden'}}></iframe>
+        </noscript>
         <ThemeProvider attribute="class" defaultTheme="light" forcedTheme="light" enableSystem={false} disableTransitionOnChange>
           {children}
         </ThemeProvider>
