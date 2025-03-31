@@ -8,15 +8,10 @@ export const commonStyles = {
   icon: "w-5 h-5 mr-3 text-primary-foreground flex-shrink-0",
 };
 
-export const tooltipStyles = `
-  .custom-tooltip {
-    background-color: #1F2937;
-    color: #E5E7EB;
-    border: 1px solid #4B5563;
-    padding: 0.5rem;
-    border-radius: 0.375rem;
-    font-size: 0.875rem;
-    max-width: 200px;
-    z-index: 50;
-  }
+export const tooltipStyle = `
+  padding: 8px;
+  border-radius: 4px;
+  background-color: hsl(var(--card-bg));
+  color: hsl(var(--card-content));
+  border: 1px solid hsl(var(--border));
 `;

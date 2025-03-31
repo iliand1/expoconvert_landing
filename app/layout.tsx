@@ -25,7 +25,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Turn expos into your #1 sales channel | XPOIQ",
+  title: "Turn expos into your #1 sales channel | ExpoConvert",
   description: "Forget CRM chaos. Forget missed leads. Just results, on autopilot.",
   icons: {
     icon: [

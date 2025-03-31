@@ -18,38 +18,48 @@
   }
 
   :root {
-    --background: 210 20% 98%;      /* #F8F9FA */
-    --foreground: 0 0% 0%;          /* Black */
-    --card: 0 0% 100%;              /* White */
-    --primary: 221 83% 53%;         /* Bright blue */
-    --primary-foreground: 226 70% 55%; /* Slightly darker blue */
-    --secondary: 210 40% 96.1%;     /* Very light grayish blue */
-    --muted-foreground: 215 25% 45%; /* Medium grayish blue */
-    --border: 214.3 31.8% 91.4%;   /* Light grayish blue */
-    --input: 214 32% 91%;           /* Light grayish blue */
+    --background: 0 0% 96%;          /* #F5F6F5 */
+    --foreground: 217 45% 18%;       /* #1A2A44 */
+    --card: 0 0% 100%;               /* White */
+    --primary: 217 45% 18%;          /* #1A2A44 */
+    --primary-foreground: 0 0% 96%;  /* #F5F6F5 */
+    --secondary: 180 85% 60%;        /* Bright Turquoise */
+    --secondary-foreground: 0 0% 96%; /* #F5F6F5 */
+    --muted: 200 13% 46%;           /* #607D8B */
+    --muted-foreground: 200 13% 46%; /* #607D8B */
+    --accent: 217 45% 18%;          /* #1A2A44 */
+    --accent-foreground: 0 0% 96%;   /* #F5F6F5 */
+    --border: 200 13% 46%;          /* #607D8B */
+    --input: 200 13% 46%;           /* #607D8B */
+    --ring: 200 13% 46%;            /* #607D8B */
     --radius: 0.5rem;               /* Not a color */
-    --card-bg: 40 100% 97%;         /* Soft cream */
-    --card-border: 210 40% 96.1%;   /* Very light grayish blue */
-    --card-title: 215 25% 27%;      /* Dark grayish blue */
-    --card-content: 0 0% 0%;        /* Black */
-    --highlight-text: 142 76% 36%;  /* Bright green */
+    --card-bg: 0 0% 100%;           /* White */
+    --card-border: 187 16% 46%;     /* #607D8B */
+    --card-title: 217 45% 18%;      /* #1A2A44 */
+    --card-content: 217 45% 18%;    /* #1A2A44 */
+    --highlight-text: 187 16% 46%;  /* #607D8B */
   }
 
   .dark {
-    --background: 220 20% 13%;      /* Very dark blue */
-    --foreground: 0 0% 98%;         /* Almost white */
-    --card: 0 0% 3.9%;              /* Almost black */
-    --primary: 0 0% 98%;            /* Almost white */
-    --primary-foreground: 235 89% 74%; /* Light bright blue */
-    --secondary: 0 0% 14.9%;        /* Very dark gray */
-    --muted-foreground: 0 0% 63.9%; /* Light gray */
-    --border: 216 34% 17%;          /* Very dark gray */
-    --input: 0 0% 14.9%;            /* Very dark gray */
-    --card-bg: 215 28% 17%;         /* Dark blue-gray */
-    --card-border: 215 25% 27%;     /* Darker blue-gray */
-    --card-title: 0 0% 98%;         /* Almost white */
-    --card-content: 0 0% 63.9%;     /* Light gray */
-    --highlight-text: 142 84% 59%;  /* Bright lime green */
+    --background: 217 45% 18%;      /* #1A2A44 */
+    --foreground: 0 0% 96%;         /* #F5F6F5 */
+    --card: 217 45% 18%;           /* #1A2A44 */
+    --primary: 0 0% 96%;           /* #F5F6F5 */
+    --primary-foreground: 217 45% 18%; /* #1A2A44 */
+    --secondary: 180 85% 60%;      /* Bright Turquoise */
+    --secondary-foreground: 0 0% 96%; /* #F5F6F5 */
+    --muted: 200 13% 46%;         /* #607D8B */
+    --muted-foreground: 200 13% 46%; /* #607D8B */
+    --accent: 217 45% 18%;        /* #1A2A44 */
+    --accent-foreground: 0 0% 96%; /* #F5F6F5 */
+    --border: 200 13% 46%;        /* #607D8B */
+    --input: 200 13% 46%;         /* #607D8B */
+    --ring: 200 13% 46%;          /* #607D8B */
+    --card-bg: 217 45% 18%;        /* #1A2A44 */
+    --card-border: 187 16% 46%;    /* #607D8B */
+    --card-title: 0 0% 96%;        /* #F5F6F5 */
+    --card-content: 187 16% 46%;   /* #607D8B */
+    --highlight-text: 187 16% 46%; /* #607D8B */
   }
 
   * {
@@ -66,6 +76,11 @@
     background-color: hsl(var(--card-bg));
     border-color: hsl(var(--card-border));
     @apply hover:border-primary-foreground transition-colors;
+  }
+
+  /* Base button styles */
+  .btn-primary {
+    @apply bg-[#40E0D0] hover:bg-[#40E0D0]/90 text-[#F5F6F5] transition-all duration-200 font-semibold flex items-center justify-center rounded-lg;
   }
 
   /* ... other component styles ... */
@@ -99,17 +114,17 @@
 }
 
 .custom-tab {
-  @apply text-gray-400 hover:text-white;
+  @apply text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--foreground))];
 }
 
 .custom-tab[data-state="active"],
 .custom-switch[data-state="checked"] {
-  background-color: #4f46e5 !important;
-  color: white !important;
+  background-color: hsl(var(--primary)) !important;
+  color: hsl(var(--primary-foreground)) !important;
 }
 
 .comparison-table {
-  @apply divide-y divide-gray-200 dark:divide-gray-700;
+  @apply divide-y divide-[hsl(var(--border))] dark:divide-[hsl(var(--border))];
 }
 
 .comparison-table-header {

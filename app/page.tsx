@@ -43,24 +43,24 @@ const Footer = lazy(() => import('./components/Footer'));
 // Skeleton loaders that match component dimensions
 const MainContentLoader = () => (
   <div className="space-y-8 animate-pulse">
-    <div className="h-[400px] bg-gray-200 rounded-lg" />
-    <div className="h-[600px] bg-gray-200 rounded-lg" />
+    <div className="h-[400px] bg-[hsl(var(--card-bg))] rounded-lg" />
+    <div className="h-[600px] bg-[hsl(var(--card-bg))] rounded-lg" />
   </div>
 );
 
 const SecondaryContentLoader = () => (
   <div className="space-y-8 animate-pulse">
-    <div className="h-[300px] bg-gray-200 rounded-lg" />
-    <div className="h-[400px] bg-gray-200 rounded-lg" />
+    <div className="h-[300px] bg-[hsl(var(--card-bg))] rounded-lg" />
+    <div className="h-[400px] bg-[hsl(var(--card-bg))] rounded-lg" />
   </div>
 );
 
 const FAQLoader = () => (
-  <div className="h-[400px] bg-gray-200 rounded-lg animate-pulse" />
+  <div className="h-[400px] bg-[hsl(var(--card-bg))] rounded-lg animate-pulse" />
 );
 
 const FooterLoader = () => (
-  <div className="h-[200px] bg-gray-200 rounded-lg animate-pulse" />
+  <div className="h-[200px] bg-[hsl(var(--card-bg))] rounded-lg animate-pulse" />
 );
 
 export default function LandingPage() {
@@ -90,7 +90,6 @@ export default function LandingPage() {
         </Suspense>
       </div>
       
-      <Separator className="my-8" />
       <Suspense fallback={<FooterLoader />}>
         <Footer />
       </Suspense>

@@ -18,6 +18,7 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        turquoise: "bg-[#40E0D0] hover:bg-[#40E0D0]/90 text-[#F5F6F5]",
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -27,7 +28,7 @@ const buttonVariants = cva(
       },
     },
     defaultVariants: {
-      variant: "default",
+      variant: "turquoise",
       size: "default",
     },
   }

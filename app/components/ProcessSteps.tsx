@@ -3,10 +3,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import Image from 'next/image';
 import { 
-  Rocket, Calendar, Tablet, Target,
-  Search, Bot, Handshake,
+  Rocket, Search, Bot, Handshake,
   QrCode, Mic, Pencil,
-  Lock, Zap, DollarSign
+  Lock, Zap, DollarSign,
 } from 'lucide-react';
 
 interface ProcessStepProps {
@@ -17,6 +16,7 @@ interface ProcessStepProps {
   position: 'left' | 'right';
   number: number;
   imageDescription: string;
+  testimonial?: string;
 }
 
 const ProcessStep: React.FC<ProcessStepProps> = ({
@@ -26,7 +26,8 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
   imageSrc,
   position,
   number,
-  imageDescription
+  imageDescription,
+  testimonial
 }) => {
   const ContentSide = (
     <div className="w-full sm:w-1/2">
@@ -52,16 +53,21 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
               );
             })}
           </ul>
+          {testimonial && (
+            <div className="mt-6 p-4 border border-primary/20 rounded-lg bg-background">
+              <p className="text-sm italic text-foreground">{testimonial}</p>
+            </div>
+          )}
           <div className="mt-6 flex flex-col items-center">
             <Button 
               size="lg" 
-              className="text-lg px-8 py-4 flex items-center bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 hover:from-blue-600 hover:via-indigo-600 hover:to-purple-700 transition-all duration-200 text-white font-semibold"
+              className="btn-primary text-lg px-8 py-4"
               onClick={() => window.open('https://calendly.com/alxndalxnd/40min', '_blank')}
             >
-              Get my discovery call <Rocket className="ml-2 h-4 w-4" />
+              👉 Book a Free Expo Strategy Call <Rocket className="ml-2 h-4 w-4" />
             </Button>
             <p className="mt-3 text-sm text-muted-foreground">
-              (no sales involved, just a friendly chat)
+              So Your Next Event Pays for Itself
             </p>
           </div>
         </CardContent>
@@ -71,12 +77,12 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
 
   const ImageSide = (
     <div className="hidden sm:block w-full sm:w-1/2">
-      <div className="aspect-[3/4] bg-background rounded-lg flex items-center justify-center relative overflow-hidden p-8">
+      <div className="relative h-80 flex items-center justify-center">
         <Image
           src={imageSrc}
-          alt={`${title} - Step ${number} of XPOIQ's expo lead management process. ${imageDescription}`}
+          alt={`${title} - Step ${number} of our expo lead management process. ${imageDescription}`}
           fill
-          className="object-contain scale-100"
+          className="object-contain"
           sizes="(max-width: 768px) 100vw, 50vw"
           quality={85}
         />
@@ -108,83 +114,83 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
 const ProcessSteps: React.FC = () => {
   const steps = [
     {
-      title: "Start winning the expo before you even arrive",
-      subtitle: "The real work starts 2-3 week before the event, this is when you pre-book meetings and start networking with key accounts.",
+      title: "Win Before the Expo Even Starts",
+      subtitle: "Pre-event preparation is key to maximizing your ROI",
       bullets: [
         {
-          title: "Unlock the hidden goldmine",
-          description: "Discover high-value prospects with precision scraping techniques that surface the right leads, every time.",
+          title: "Identify your highest-value prospects",
+          description: "We scrape attendee lists, LinkedIn, and industry databases to surface decision-makers.",
           icon: Search
         },
         {
-          title: "Qualify like a pro, automatically",
-          description: "Stop guessing—know which leads are worth your time before the expo even begins.",
+          title: "Pre-qualify leads before the event",
+          description: "Focus on buyers, not tire-kickers.",
           icon: Bot
         },
         {
-          title: "Pre-event buzz that opens doors",
-          description: "Warm up key accounts with outreach strategies that get your name on their calendar, not just in their inbox.",
+          title: "Lock in meetings in advance",
+          description: "Targeted outreach ensures you arrive with a packed calendar.",
           icon: Handshake
         }
       ],
       imageSrc: "/screenshots/lead_scoring.png",
-      imageDescription: "XPOIQ's intelligent lead scoring dashboard showing prospect qualification and prioritization for expo success",
-      icon: Calendar
+      imageDescription: "ExpoConvert's intelligent lead scoring dashboard showing prospect qualification and prioritization for expo success",
+      testimonial: "These guys craft personalized strategies that consistently convert leads into revenue."
     },
     {
-      title: "Capture every conversation that counts, effortlessly",
-      subtitle: "Collecting intel during the event is key yet tedious. Our web-app makes digitising business cards and inputting information into your CRM as easy as pie.",
+      title: "Capture and Organize Leads Instantly",
+      subtitle: "No more manual data entry or lost business cards",
       bullets: [
         {
-          title: "Turn chaos into clarity",
-          description: "Instantly digitize stacks of business cards and keep your CRM spotless, even in the heat of the expo.",
+          title: "Real-time CRM sync",
+          description: "Leads captured at expos integrate seamlessly into your existing CRM and sales workflow - no disruptions.",
           icon: QrCode
         },
         {
-          title: "Speak, and it's done",
-          description: "Record quick voice memos and watch as key details are automatically parsed and perfectly organized in your CRM.",
+          title: "Ditch the business card chaos",
+          description: "Snap a photo, send it to Slack - your leads are instantly logged.",
           icon: Mic
         },
         {
-          title: "Never miss a detail",
-          description: "Jot down notes on the fly, and let our system seamlessly sync them to the right lead profile—no extra steps needed.",
+          title: "Speak, don't type",
+          description: "Voice notes are transcribed and structured automatically for follow-up.",
           icon: Pencil
         }
       ],
       imageSrc: "/screenshots/iphone_no_bg.png",
-      imageDescription: "XPOIQ's mobile app interface showcasing business card scanning and voice memo features for effortless lead capture at expos",
-      icon: Tablet
+      imageDescription: "ExpoConvert's mobile app interface showcasing business card scanning and voice memo features for effortless lead capture at expos",
+      testimonial: "In a market saturated with AI-generated copy-and-paste pitches, it's refreshing to work with a team that prioritizes genuine human connections and delivers measurable outcomes."
     },
     {
-      title: "After the expo",
-      subtitle: "Turn leads into deals while competitors drop the ball.",
+      title: "Follow-Up That Turns Leads Into Deals",
+      subtitle: "Convert more leads with strategic follow-up",
       bullets: [
         {
-          title: "Seal every opportunity",
-          description: "An airtight follow-up system ensures no lead slips through the cracks—ever.",
+          title: "No more \"just checking in\" emails",
+          description: "Follow-ups are strategic, timely, and tailored.",
           icon: Lock
         },
         {
-          title: "Your hands-free sales engine",
-          description: "Let automated sequences do the heavy lifting, keeping leads warm while you focus on what matters, so that your sales team is busy closing deals",
+          title: "Seamless handoff to your sales team",
+          description: "Qualified leads go straight to closers.",
           icon: Zap
         },
         {
-          title: "Close deals, not busywork",
-          description: "Free your sales team to do what they do best—turn hot leads into revenue, fast.",
+          title: "Proven system for turning conversations into contracts",
+          description: "No leads left behind.",
           icon: DollarSign
         }
       ],
       imageSrc: "/screenshots/saas_unibox.png",
-      imageDescription: "XPOIQ's unified inbox and automation dashboard for streamlined post-expo lead follow-up and deal closing",
-      icon: Target
+      imageDescription: "ExpoConvert's unified inbox and automation dashboard for streamlined post-expo lead follow-up and deal closing",
+      testimonial: "Finally - a solution that understands sales is driven by trust and authentic interactions, not automated spam. Highly recommended for sales leaders who care about genuine results."
     }
   ];
 
   return (
     <section className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <h2 className="text-3xl font-extrabold text-foreground text-center mb-4">What we do to make it happen</h2>
+        <h2 className="text-3xl font-extrabold text-foreground text-center mb-12">How It Works</h2>
         
         <div className="relative">
           {/* Timeline line */}
@@ -202,6 +208,7 @@ const ProcessSteps: React.FC = () => {
                 position={index % 2 === 0 ? 'left' : 'right'}
                 number={index + 1}
                 imageDescription={step.imageDescription}
+                testimonial={step.testimonial}
               />
             ))}
           </div>

@@ -1,60 +1,56 @@
 import React from 'react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./ui/accordion";
-import { Zap, Rocket } from 'lucide-react';
+import { Rocket } from 'lucide-react';
 import { Button } from "./ui/button";
 
 const FAQ: React.FC = () => {
   return (
     <div className="py-20">
       <div className="max-w-3xl mx-auto px-6 sm:px-8">
-        <div className="flex items-center justify-center mb-4">
-          <Zap className="w-8 h-8 text-foreground mr-3" />
-          <h2 className="text-3xl font-extrabold text-foreground text-center">FAQ</h2>
-        </div>
+        <h2 className="text-3xl font-extrabold text-center mb-12">FAQ</h2>
         <Accordion type="single" collapsible className="w-full">
           {[
             { 
-              objection: "How does XPOIQ help me maximize ROI from expos?", 
-              response: "XPOIQ ensures every dollar you invest drives measurable results. From pre-event lead qualification and meeting scheduling to real-time data collection and post-event follow-ups, our system tracks every lead and conversation. You'll know exactly which prospects deliver the biggest wins—no guesswork, just actionable insights."
+              question: "How does this help me get more ROI from expos?", 
+              answer: "We provide a structured system to book meetings, capture leads, and automate follow-ups, so no opportunities slip through the cracks."
             },
             { 
-              objection: "Will my team still need to manually input business cards and lead data?", 
-              response: "Not at all. Our web app digitizes business cards instantly and syncs the information directly into your CRM. You can also add voice memos or quick notes, which are automatically parsed and organized, saving your team hours of tedious admin work."
+              question: "Do my sales reps have to log data manually?", 
+              answer: "No. Our system captures, organizes, and syncs leads in real-time, eliminating busywork."
             },
             { 
-              objection: "How does XPOIQ ensure no leads fall through the cracks?", 
-              response: "Our airtight follow-up system keeps leads warm with automated sequences and reminders. Every prospect is accounted for and nurtured, so your sales team can focus on closing deals instead of chasing cold leads."
+              question: "What happens before the event?", 
+              answer: "We identify top prospects, warm them up, and schedule meetings before you arrive."
             },
             { 
-              objection: "What happens before the expo?", 
-              response: "We start 2-3 weeks in advance, helping you identify and qualify high-value prospects using advanced scraping techniques. We also assist in scheduling pre-event meetings and warming up key accounts, so you walk into the expo with a plan and a pipeline."
+              question: "How does this compare to using a CRM?", 
+              answer: "A CRM stores data. Our system actively drives meetings, sales conversations, and follow-ups."
             },
             { 
-              objection: "Is this suitable for my industry or company size?", 
-              response: "Absolutely. XPOIQ is designed to work for any B2B company that invests in expos as part of their lead generation strategy. Whether you're a startup or an established enterprise, our systems adapt to your needs and scale with your goals."
-            },
+              question: "Is this right for my industry or company size?", 
+              answer: "If expos are part of your sales strategy, this approach works-whether you're a startup or an established business."
+            }
           ].map((item, index) => (
             <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger className="text-left text-lg sm:text-xl text-primary-foreground hover:text-primary-foreground/80">
-                {item.objection}
+              <AccordionTrigger className="text-left text-lg font-semibold">
+                {item.question}
               </AccordionTrigger>
-              <AccordionContent className="text-base sm:text-lg text-foreground">
-                {item.response}
+              <AccordionContent className="text-base text-muted-foreground">
+                {item.answer}
               </AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
 
-        <div className="mt-16 flex flex-col items-center">
+        <div className="mt-12 flex flex-col items-center">
           <Button 
-            size="lg" 
-            className="text-lg px-8 py-4 flex items-center bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 hover:from-blue-600 hover:via-indigo-600 hover:to-purple-700 transition-all duration-200 text-white font-semibold"
+            className="btn-primary mt-8" 
             onClick={() => window.open('https://calendly.com/alxndalxnd/40min', '_blank')}
           >
-            Let's map out your next expo <Rocket className="ml-2 h-4 w-4" />
+            👉 Book Your Free Expo Strategy Call <Rocket className="ml-2 h-4 w-4" />
           </Button>
           <p className="mt-3 text-sm text-muted-foreground">
-            (no pressure, just insights)
+            So Your Next Event Pays for Itself
           </p>
         </div>
       </div>

@@ -6,16 +6,16 @@ import { Rocket, CheckCircle2 } from 'lucide-react';
 const FinalVision: React.FC = () => {
   const benefits = [
     {
-      title: "Walk in with purpose",
-      description: "Key meetings prebooked with high-value prospects, ensuring you hit the ground running."
+      title: "Meetings lined up before you land",
+      description: "No more wandering the expo hoping to bump into the right people."
     },
     {
-      title: "Maximize every opportunity",
-      description: "A system that captures and organizes total lead volume, leaving no potential deal behind."
+      title: "Leads captured, structured, and prioritized",
+      description: "Every conversation turns into a real opportunity."
     },
     {
-      title: "Smiles all around",
-      description: "A seamless experience that keeps your team productive, your prospects impressed, and everyone happy."
+      title: "Your team focused on selling, not admin",
+      description: "A system that runs in the background, keeping deals moving."
     }
   ];
 
@@ -24,7 +24,7 @@ const FinalVision: React.FC = () => {
       <div className="max-w-3xl mx-auto px-6 sm:px-8">
         <Card className="card">
           <CardHeader>
-            <CardTitle className="text-3xl font-extrabold text-center">Your next expo with us</CardTitle>
+            <CardTitle className="text-3xl font-extrabold text-center">What Your Next Expo Could Look Like</CardTitle>
           </CardHeader>
           <CardContent>
             <ul className="space-y-4">
@@ -45,14 +45,13 @@ const FinalVision: React.FC = () => {
 
         <div className="mt-12 flex flex-col items-center">
           <Button 
-            size="lg" 
-            className="text-lg px-8 py-4 flex items-center bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 hover:from-blue-600 hover:via-indigo-600 hover:to-purple-700 transition-all duration-200 text-white font-semibold"
+            className="btn-primary mt-8" 
             onClick={() => window.open('https://calendly.com/alxndalxnd/40min', '_blank')}
           >
-            Let's map out your next expo <Rocket className="ml-2 h-4 w-4" />
+            👉 Book a Free Expo Strategy Call <Rocket className="ml-2 h-4 w-4" />
           </Button>
           <p className="mt-3 text-sm text-muted-foreground">
-            (no pressure, just insights)
+            So Your Next Event Pays for Itself
           </p>
         </div>
       </div>
