@@ -11,7 +11,10 @@ const ProblemSolution: React.FC = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center">
           <Card className="card hover:border-red-500 hover:shadow-red-500/10">
-            <CardContent className="pt-6">
+            <CardHeader>
+              <CardTitle className="card-title">What happens</CardTitle>
+            </CardHeader>
+            <CardContent>
               <ul className="space-y-6">
                 <li className="flex gap-3">
                   <div className="flex-shrink-0 w-6 h-6 mt-1">
