@@ -1,7 +1,7 @@
 from PIL import Image
 
 # Open the original image
-img = Image.open('public/expoiq_logo.jpg')
+img = Image.open('public/Logo BW.jpg')
 
 # Convert to RGBA if it isn't already
 img = img.convert('RGBA')
