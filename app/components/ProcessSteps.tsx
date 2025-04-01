@@ -203,8 +203,8 @@ const ProcessSteps: React.FC = () => {
               {step.testimonial && (
                 <div className="relative z-10 w-full my-16">
                   <div className="max-w-4xl mx-auto px-6">
-                    <div className="relative p-8 rounded-lg bg-primary/5 border border-primary/15 shadow-sm">
-                      <Quote className="absolute top-4 left-4 w-8 h-8 text-primary/30" />
+                    <div className="relative p-8 rounded-lg border-2 border-[#2DBDAD] shadow-sm">
+                      <Quote className="absolute top-4 left-4 w-8 h-8 text-primary" />
                       <p className="text-lg italic text-foreground leading-relaxed text-center pt-4">
                         {step.testimonial}
                       </p>
