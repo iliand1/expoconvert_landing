@@ -46,7 +46,7 @@ const FAQ: React.FC = () => {
             size="lg"
             variant="turquoise"
             className="text-lg px-8 py-4"
-            onClick={() => window.open('https://calendly.com/alxndalxnd/40min', '_blank')}
+            onClick={() => window.open('https://zcal.co/sebastianhidalgo/strategy-session', '_blank')}
           >
             👉 Book Your Free Expo Strategy Call
           </Button>

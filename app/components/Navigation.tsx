@@ -39,7 +39,7 @@ const Navigation: React.FC = () => {
 
   const handleMobileMenuButtonClick = () => {
     setIsMobileMenuOpen(false);
-    window.open('https://calendly.com/alxndalxnd/40min', '_blank');
+    window.open('https://zcal.co/sebastianhidalgo/strategy-session', '_blank');
   };
 
   return (
@@ -85,7 +85,7 @@ const Navigation: React.FC = () => {
               variant="turquoise"
               size="sm"
               className="text-base px-6 py-2"
-              onClick={() => window.open('https://calendly.com/alxndalxnd/40min', '_blank')}
+              onClick={() => window.open('https://zcal.co/sebastianhidalgo/strategy-session', '_blank')}
             >
               Map Out Your Next Expo
             </Button>
