@@ -68,7 +68,9 @@ export default function LandingPage() {
     <div className="min-h-screen bg-background text-foreground">
       <Navigation />
       <Hero />
-      <AuthorityBlock />
+      <div id="authority">
+        <AuthorityBlock />
+      </div>
       <Separator className="my-8" />
       
       <div id="main-content">

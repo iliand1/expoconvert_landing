@@ -26,7 +26,6 @@ export default function FeaturesPipeline() {
               iconColor="text-green-500"
               valueColor="text-green-400"
               position="right"
-              number={1}
             />
 
             {/* Lead Collection */}
@@ -39,7 +38,6 @@ export default function FeaturesPipeline() {
               iconColor="text-blue-500"
               valueColor="text-blue-400"
               position="left"
-              number={2}
             />
 
             {/* Message Crafting */}
@@ -52,7 +50,6 @@ export default function FeaturesPipeline() {
               iconColor="text-purple-500"
               valueColor="text-purple-400"
               position="right"
-              number={3}
             />
 
             {/* Automations Created */}
@@ -65,7 +62,6 @@ export default function FeaturesPipeline() {
               iconColor="text-yellow-500"
               valueColor="text-yellow-400"
               position="left"
-              number={4}
             />
           </div>
         </div>
@@ -83,7 +79,6 @@ interface PipelineStageProps {
   iconColor: string;
   valueColor: string;
   position: 'left' | 'right';
-  number: number;
 }
 
 const PipelineStage: React.FC<PipelineStageProps> = ({
@@ -94,8 +89,7 @@ const PipelineStage: React.FC<PipelineStageProps> = ({
   description,
   iconColor,
   valueColor,
-  position,
-  number
+  position
 }) => {
   return (
     <div className={`relative sm:flex sm:items-center ${position === 'right' ? 'sm:justify-end' : ''}`}>
@@ -113,10 +107,6 @@ const PipelineStage: React.FC<PipelineStageProps> = ({
             <p className="text-muted-foreground mt-2">{description}</p>
           </CardContent>
         </Card>
-      </div>
-      {/* Desktop step indicator - hidden on mobile */}
-      <div className={`absolute left-0 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-primary rounded-full items-center justify-center sm:left-1/2 sm:-ml-4 hidden sm:flex`}>
-        <span className="text-primary-foreground font-bold">{number}</span>
       </div>
     </div>
   );

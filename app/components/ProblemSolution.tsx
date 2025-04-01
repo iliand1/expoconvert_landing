@@ -1,11 +1,11 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
-import { Rocket, Check, X } from 'lucide-react';
+import { Check, X } from 'lucide-react';
 
 const ProblemSolution: React.FC = () => {
   return (
-    <section className="py-20 bg-background">
+    <section id="why-us" className="py-20 bg-background">
       <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
         <h2 className="text-3xl font-extrabold text-foreground text-center mb-12">Why Most Companies Struggle to Turn Expos Into Sales</h2>
         
@@ -87,10 +87,12 @@ const ProblemSolution: React.FC = () => {
 
         <div className="mt-12 flex flex-col items-center">
           <Button 
-            className="btn-primary mt-8" 
+            size="lg"
+            variant="turquoise"
+            className="text-lg px-8 py-4"
             onClick={() => window.open('https://calendly.com/alxndalxnd/40min', '_blank')}
           >
-            👉 Book a Free Expo Strategy Call <Rocket className="ml-2 h-4 w-4" />
+            👉 Book a Free Expo Strategy Call
           </Button>
           <p className="mt-3 text-sm text-muted-foreground">
             So Your Next Event Pays for Itself

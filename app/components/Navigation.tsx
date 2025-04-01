@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Button } from "./ui/button";
-import { Rocket } from 'lucide-react';
 import Link from 'next/link';
 
 const Navigation: React.FC = () => {
@@ -20,11 +19,9 @@ const Navigation: React.FC = () => {
     e.preventDefault();
     const element = document.getElementById(sectionId);
     if (element) {
-      const offset = 80; // Adjust this value based on your navbar height
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementRect = element.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      const offsetPosition = elementPosition - offset;
+      const offset = 100; // Increased offset to account for sticky header and some padding
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
 
       window.scrollTo({
         top: offsetPosition,
@@ -43,22 +40,22 @@ const Navigation: React.FC = () => {
           </Link>
           <div className="hidden md:flex flex-grow items-center space-x-2 overflow-x-auto">
             <Link 
-              href="/#solution" 
-              onClick={(e) => scrollToSection(e, 'solution')}
+              href="/#why-us" 
+              onClick={(e) => scrollToSection(e, 'why-us')}
               className="text-sm text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--foreground))] transition-colors px-3 py-2"
             >
-              Solution
+              Why Us
             </Link>
             <Link 
-              href="/#process" 
-              onClick={(e) => scrollToSection(e, 'process')}
+              href="/#how-it-works" 
+              onClick={(e) => scrollToSection(e, 'how-it-works')}
               className="text-sm text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--foreground))] transition-colors px-3 py-2"
             >
-              Process
+              How It Works
             </Link>
             <Link 
-              href="/#vision" 
-              onClick={(e) => scrollToSection(e, 'vision')}
+              href="/#secondary-content" 
+              onClick={(e) => scrollToSection(e, 'secondary-content')}
               className="text-sm text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--foreground))] transition-colors px-3 py-2"
             >
               Vision
@@ -74,10 +71,11 @@ const Navigation: React.FC = () => {
           <div className="flex-grow md:flex-grow-0"></div>
           <Button 
             variant="turquoise"
-            className="text-sm ml-4 px-4 py-2"
+            size="lg"
+            className="text-lg px-8 py-4"
             onClick={() => window.open('https://calendly.com/alxndalxnd/40min', '_blank')}
           >
-            Map Out Your Next Expo <Rocket className="ml-2 h-4 w-4" />
+            Map Out Your Next Expo
           </Button>
         </div>
       </div>

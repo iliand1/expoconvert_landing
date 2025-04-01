@@ -3,9 +3,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import Image from 'next/image';
 import { 
-  Rocket, Search, Bot, Handshake,
+  Search, Bot, Handshake,
   QrCode, Mic, Pencil,
   Lock, Zap, DollarSign,
+  Users, Target, LineChart,
+  ArrowRight
 } from 'lucide-react';
 
 interface ProcessStepProps {
@@ -14,7 +16,6 @@ interface ProcessStepProps {
   bullets: { title: string; description: string; icon: React.ElementType }[];
   imageSrc: string;
   position: 'left' | 'right';
-  number: number;
   imageDescription: string;
   testimonial?: string;
 }
@@ -25,7 +26,6 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
   bullets,
   imageSrc,
   position,
-  number,
   imageDescription,
   testimonial
 }) => {
@@ -60,11 +60,12 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
           )}
           <div className="mt-6 flex flex-col items-center">
             <Button 
-              size="lg" 
-              className="btn-primary text-lg px-8 py-4"
+              size="lg"
+              variant="turquoise"
+              className="text-lg px-8 py-4"
               onClick={() => window.open('https://calendly.com/alxndalxnd/40min', '_blank')}
             >
-              👉 Book a Free Expo Strategy Call <Rocket className="ml-2 h-4 w-4" />
+              👉 Book a Free Expo Strategy Call
             </Button>
             <p className="mt-3 text-sm text-muted-foreground">
               So Your Next Event Pays for Itself
@@ -80,7 +81,7 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
       <div className="relative h-80 flex items-center justify-center">
         <Image
           src={imageSrc}
-          alt={`${title} - Step ${number} of our expo lead management process. ${imageDescription}`}
+          alt={`${title} - ${imageDescription}`}
           fill
           className="object-contain"
           sizes="(max-width: 768px) 100vw, 50vw"
@@ -103,10 +104,6 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
           {ContentSide}
         </>
       )}
-      {/* Step indicator */}
-      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-foreground rounded-full items-center justify-center sm:left-1/2 sm:-ml-4 hidden sm:flex">
-        <span className="text-background font-bold">{number}</span>
-      </div>
     </div>
   );
 };
@@ -188,7 +185,7 @@ const ProcessSteps: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section id="how-it-works" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         <h2 className="text-3xl font-extrabold text-foreground text-center mb-12">How It Works</h2>
         
@@ -206,7 +203,6 @@ const ProcessSteps: React.FC = () => {
                 bullets={step.bullets}
                 imageSrc={step.imageSrc}
                 position={index % 2 === 0 ? 'left' : 'right'}
-                number={index + 1}
                 imageDescription={step.imageDescription}
                 testimonial={step.testimonial}
               />

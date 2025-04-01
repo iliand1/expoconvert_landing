@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from "./ui/button";
-import { Rocket, DollarSign, Users, TrendingUp } from 'lucide-react';
+import { DollarSign, Users, TrendingUp } from 'lucide-react';
 
 const InvestOnce: React.FC = () => {
   return (
@@ -25,11 +25,12 @@ const InvestOnce: React.FC = () => {
         </ul>
         <div className="flex justify-center">
           <Button 
-            size="lg" 
-            className="text-lg px-8 py-4 flex items-center bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 hover:from-blue-600 hover:via-indigo-600 hover:to-purple-700 transition-all duration-200 text-white font-semibold" 
+            size="lg"
+            variant="turquoise"
+            className="text-lg px-8 py-4"
             onClick={() => window.open('https://calendly.com/alxndalxnd/40min', '_blank')}
           >
-            Book Discovery Session <Rocket className="ml-2 h-4 w-4" />
+            Book Discovery Session
           </Button>
         </div>
       </div>

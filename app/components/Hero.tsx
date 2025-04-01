@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button } from "./ui/button";
-import { Rocket } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
@@ -19,7 +18,7 @@ const Hero: React.FC = () => {
             className="text-lg px-8 py-4"
             onClick={() => window.open('https://calendly.com/alxndalxnd/40min', '_blank')}
           >
-            👉 Book a Free Expo Strategy Call <Rocket className="ml-2 h-4 w-4" />
+            👉 Book a Free Expo Strategy Call
           </Button>
           <p className="mt-3 text-sm text-muted-foreground">
             So Your Next Event Pays for Itself
