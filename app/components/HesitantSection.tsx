@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from "./ui/button";
+import { CheckCircle2 } from 'lucide-react';
 
 const WhyRiskFree: React.FC = () => {
   const benefits = [
@@ -25,7 +26,9 @@ const WhyRiskFree: React.FC = () => {
         <div className="space-y-6">
           {benefits.map((benefit, index) => (
             <div key={index} className="flex gap-4 items-start">
-              <div className="flex-shrink-0 text-2xl">🛡️</div>
+              <div className="flex-shrink-0">
+                <CheckCircle2 className="w-6 h-6 text-green-500" />
+              </div>
               <div>
                 <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
                 <p className="text-muted-foreground">{benefit.description}</p>
