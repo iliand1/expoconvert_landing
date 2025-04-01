@@ -5,9 +5,7 @@ import Image from 'next/image';
 import { 
   Search, Bot, Handshake,
   QrCode, Mic, Pencil,
-  Lock, Zap, DollarSign,
-  Users, Target, LineChart,
-  ArrowRight
+  Lock, Zap, DollarSign
 } from 'lucide-react';
 
 interface ProcessStepProps {
