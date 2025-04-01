@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { 
   Search, Bot, Handshake,
   QrCode, Mic, Pencil,
-  Lock, Zap, DollarSign
+  Lock, Zap, DollarSign, Quote
 } from 'lucide-react';
 
 interface ProcessStepProps {
@@ -25,7 +25,6 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
   imageSrc,
   position,
   imageDescription,
-  testimonial
 }) => {
   const ContentSide = (
     <div className="w-full sm:w-1/2">
@@ -51,11 +50,6 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
               );
             })}
           </ul>
-          {testimonial && (
-            <div className="mt-6 p-4 border border-primary/20 rounded-lg bg-background">
-              <p className="text-sm italic text-foreground">{testimonial}</p>
-            </div>
-          )}
           <div className="mt-6 flex flex-col items-center">
             <Button 
               size="lg"
@@ -76,7 +70,7 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
 
   const ImageSide = (
     <div className="hidden sm:block w-full sm:w-1/2">
-      <div className="relative h-80 flex items-center justify-center">
+      <div className="relative h-[600px] flex items-center justify-center">
         <Image
           src={imageSrc}
           alt={`${title} - ${imageDescription}`}
@@ -188,24 +182,38 @@ const ProcessSteps: React.FC = () => {
         <h2 className="text-3xl font-extrabold text-foreground text-center mb-12">How It Works</h2>
         
         <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-4 top-0 bottom-0 w-[2px] bg-primary sm:left-1/2 sm:-ml-[1px] hidden sm:block"></div>
-          
-          {/* Steps */}
-          <div className="space-y-16">
-            {steps.map((step, index) => (
-              <ProcessStep
-                key={index}
-                title={step.title}
-                subtitle={step.subtitle}
-                bullets={step.bullets}
-                imageSrc={step.imageSrc}
-                position={index % 2 === 0 ? 'left' : 'right'}
-                imageDescription={step.imageDescription}
-                testimonial={step.testimonial}
-              />
-            ))}
-          </div>
+          {steps.map((step, index) => (
+            <React.Fragment key={index}>
+              <div className="relative">
+                {/* Timeline line for each step */}
+                {index !== steps.length - 1 && (
+                  <div className="absolute left-4 top-0 h-full w-[2px] bg-primary sm:left-1/2 sm:-ml-[1px] hidden sm:block" />
+                )}
+                
+                <ProcessStep
+                  title={step.title}
+                  subtitle={step.subtitle}
+                  bullets={step.bullets}
+                  imageSrc={step.imageSrc}
+                  position={index % 2 === 0 ? 'left' : 'right'}
+                  imageDescription={step.imageDescription}
+                />
+              </div>
+              
+              {step.testimonial && (
+                <div className="relative z-10 w-full my-16">
+                  <div className="max-w-4xl mx-auto px-6">
+                    <div className="relative p-8 rounded-lg bg-primary/5 border border-primary/15 shadow-sm">
+                      <Quote className="absolute top-4 left-4 w-8 h-8 text-primary/30" />
+                      <p className="text-lg italic text-foreground leading-relaxed text-center pt-4">
+                        {step.testimonial}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </React.Fragment>
+          ))}
         </div>
       </div>
     </section>
