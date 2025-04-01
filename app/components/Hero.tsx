@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from "./ui/button";
 
-const Hero: React.FC = () => {
+const Hero: React.FC = () => { 
   return (
     <div className="pt-40 pb-24">
       <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
