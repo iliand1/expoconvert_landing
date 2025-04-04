@@ -70,7 +70,7 @@ const ProcessStep: React.FC<ProcessStepProps> = ({
 
   const ImageSide = (
     <div className="hidden sm:block w-full sm:w-1/2">
-      <div className="relative h-[600px] flex items-center justify-center">
+      <div className="relative h-[600px] flex items-center justify-center bg-[#F5F6F5]">
         <Image
           src={imageSrc}
           alt={`${title} - ${imageDescription}`}
@@ -122,7 +122,7 @@ const ProcessSteps: React.FC = () => {
           icon: Handshake
         }
       ],
-      imageSrc: "/screenshots/lead_scoring.png",
+      imageSrc: "/screenshots/1-new.png",
       imageDescription: "ExpoConvert's intelligent lead scoring dashboard showing prospect qualification and prioritization for expo success",
       testimonial: "These guys craft personalized strategies that consistently convert leads into revenue."
     },
@@ -146,7 +146,7 @@ const ProcessSteps: React.FC = () => {
           icon: Pencil
         }
       ],
-      imageSrc: "/screenshots/iphone_no_bg.png",
+      imageSrc: "/screenshots/2.png",
       imageDescription: "ExpoConvert's mobile app interface showcasing business card scanning and voice memo features for effortless lead capture at expos",
       testimonial: "In a market saturated with AI-generated copy-and-paste pitches, it's refreshing to work with a team that prioritizes genuine human connections and delivers measurable outcomes."
     },
@@ -170,7 +170,7 @@ const ProcessSteps: React.FC = () => {
           icon: DollarSign
         }
       ],
-      imageSrc: "/screenshots/saas_unibox.png",
+      imageSrc: "/screenshots/3.png",
       imageDescription: "ExpoConvert's unified inbox and automation dashboard for streamlined post-expo lead follow-up and deal closing",
       testimonial: "Finally - a solution that understands sales is driven by trust and authentic interactions, not automated spam. Highly recommended for sales leaders who care about genuine results."
     }
