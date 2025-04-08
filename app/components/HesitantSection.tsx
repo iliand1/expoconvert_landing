@@ -6,15 +6,15 @@ const WhyRiskFree: React.FC = () => {
   const benefits = [
     {
       title: "Clear ROI upfront",
-      description: "Our strategy session demonstrates exactly how your expo budget translates into measurable revenue growth."
+      description: "Your free strategy session shows exactly how to turn your $15k–$100k expo budget into measurable revenue."
     },
     {
-      title: "No contracts, no commitments",
-      description: "Just a high-value strategy session."
+      title: "Save time and money",
+      description: "Our clients recover 32+ hours of manual work after every event — and reinvest it where it counts."
     },
     {
       title: "Battle-tested approach",
-      description: "Used by top B2B companies to turn expos into revenue drivers."
+      description: "Trusted by B2B companies closing deals worth $50k to $10M+ — where follow-up makes or breaks the sale."
     }
   ];
 
