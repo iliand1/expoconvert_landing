@@ -21,8 +21,8 @@ const ProblemSolution: React.FC = () => {
                     <X className="w-full h-full text-red-500" strokeWidth={3} />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <span className="font-semibold">Big investment, unclear returns</span>
-                    <span className="text-muted-foreground">Without a system, expos feel like a gamble.</span>
+                    <span className="font-semibold">Leads Don’t Enter a Sales Process</span>
+                    <span className="text-muted-foreground">70% of expo contacts never make it into structured follow-up — they’re lost in notes, inboxes, or CRMs.</span>
                   </div>
                 </li>
                 <li className="flex gap-3">
@@ -30,8 +30,8 @@ const ProblemSolution: React.FC = () => {
                     <X className="w-full h-full text-red-500" strokeWidth={3} />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <span className="font-semibold">Sales teams drowning in admin</span>
-                    <span className="text-muted-foreground">Manually tracking contacts and leads wastes time and energy.</span>
+                    <span className="font-semibold">Conversations Go Cold Fast</span>
+                    <span className="text-muted-foreground">Only 6% of exhibitors are confident in converting leads. Most forget what was even discussed.</span>
                   </div>
                 </li>
                 <li className="flex gap-3">
@@ -39,8 +39,8 @@ const ProblemSolution: React.FC = () => {
                     <X className="w-full h-full text-red-500" strokeWidth={3} />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <span className="font-semibold">Follow-ups that fizzle out</span>
-                    <span className="text-muted-foreground">Hot leads go cold fast without a structured post-event process.</span>
+                    <span className="font-semibold">You Risk Losing 6–7 Figure Deals</span>
+                    <span className="text-muted-foreground">One missed follow-up in B2B can cost $100k to $10M+ — and it happens more often than teams admit.</span>
                   </div>
                 </li>
               </ul>
@@ -58,8 +58,8 @@ const ProblemSolution: React.FC = () => {
                     <Check className="w-full h-full text-green-500" strokeWidth={3} />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <span className="font-semibold">Book meetings with key prospects before the event</span>
-                    <span className="text-muted-foreground">So you start strong with real opportunities.</span>
+                    <span className="font-semibold">Pre-Book Sales Meetings Before Day 1</span>
+                    <span className="text-muted-foreground">We lock in qualified appointments ahead of the event, so you show up with pipeline — not just hope.</span>
                   </div>
                 </li>
                 <li className="flex gap-3">
@@ -67,8 +67,8 @@ const ProblemSolution: React.FC = () => {
                     <Check className="w-full h-full text-green-500" strokeWidth={3} />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <span className="font-semibold">Instantly capture and qualify leads</span>
-                    <span className="text-muted-foreground">So every conversation turns into a real sales opportunity.</span>
+                    <span className="font-semibold">Capture + Sync Every Lead Automatically</span>
+                    <span className="text-muted-foreground">Photos, voice notes, and CRM integrations replace messy notes and post-show admin.</span>
                   </div>
                 </li>
                 <li className="flex gap-3">
@@ -76,8 +76,8 @@ const ProblemSolution: React.FC = () => {
                     <Check className="w-full h-full text-green-500" strokeWidth={3} />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <span className="font-semibold">Automated follow-ups that keep deals moving</span>
-                    <span className="text-muted-foreground">So leads don't slip through the cracks.</span>
+                    <span className="font-semibold">Follow Up in Hours, Not Weeks</span>
+                    <span className="text-muted-foreground">Launch personalized sequences within 24 hours and recover 32+ hours of post-event busywork.</span>
                   </div>
                 </li>
               </ul>
