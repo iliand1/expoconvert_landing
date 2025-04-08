@@ -7,15 +7,15 @@ const FinalVision: React.FC = () => {
   const benefits = [
     {
       title: "Meetings lined up before you land",
-      description: "No more wandering the expo hoping to bump into the right people."
+      description: "No more wandering the floor hoping for the right connection."
     },
     {
       title: "Leads captured, structured, and prioritized",
-      description: "Every conversation turns into a real opportunity."
+      description: "Every conversation tracked with context and next steps."
     },
     {
       title: "Your team focused on selling, not admin",
-      description: "A system that runs in the background, keeping deals moving."
+      description: "Let the system handle everything behind the scenes."
     }
   ];
 
