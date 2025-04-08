@@ -16,7 +16,7 @@ const AuthorityBlock: React.FC = () => {
     <div className="pt-16 pb-24 bg-background/50">
       <div className="max-w-6xl mx-auto px-6 sm:px-8">
         <p className="text-center text-sm font-medium text-muted-foreground mb-8">
-          Trusted by industry leaders
+          Trusted by B2B teams in SaaS, robotics, manufacturing, education — and more industries than you’d expect
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 items-center justify-items-center">
           {partners.map((partner, index) => (
