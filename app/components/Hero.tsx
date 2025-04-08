@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
           Turn Every Expo into Your #1 Sales Channel With a Proven System Built for Sales Leaders
         </h2>
         <p className="mt-6 text-xl text-muted-foreground">
-          Most companies spend <strong className="text-foreground">$15k - $75k per expo</strong> repeatedly and leave with nothing but a pile of business cards. We build you a repeatable, reliable system to ensure consistent ROI and lasting sales impact - helping your team close more deals with way less effort.
+          Most companies spend <strong className="text-foreground">$15k - $75k per expo</strong> and walk away with a stack of business cards and no pipeline. We install structured sales systems that turn event chaos into high-velocity deals — so your team closes more with less effort.
         </p>
         <div className="mt-12 flex flex-col items-center">
           <Button 
