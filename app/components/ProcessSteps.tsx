@@ -108,17 +108,17 @@ const ProcessSteps: React.FC = () => {
       bullets: [
         {
           title: "Identify your highest-value prospects",
-          description: "We scrape attendee lists, LinkedIn, and industry databases to surface decision-makers.",
+          description: "We extract decision-makers from attendee lists, LinkedIn, and industry databases.",
           icon: Search
         },
         {
           title: "Pre-qualify leads before the event",
-          description: "Focus on buyers, not tire-kickers.",
+          description: "Focus on serious buyers — not badge scanners or tire-kickers.",
           icon: Bot
         },
         {
           title: "Lock in meetings in advance",
-          description: "Targeted outreach ensures you arrive with a packed calendar.",
+          description: "Targeted outreach fills your calendar before day one.",
           icon: Handshake
         }
       ],
@@ -132,12 +132,12 @@ const ProcessSteps: React.FC = () => {
       bullets: [
         {
           title: "Real-time CRM sync",
-          description: "Leads captured at expos integrate seamlessly into your existing CRM and sales workflow - no disruptions.",
+          description: "Every captured lead integrates with your sales stack — no more post-expo mess.",
           icon: QrCode
         },
         {
           title: "Ditch the business card chaos",
-          description: "Snap a photo, send it to Slack - your leads are instantly logged.",
+          description: "Snap a photo, send it to Slack — done.",
           icon: Mic
         },
         {
@@ -155,18 +155,18 @@ const ProcessSteps: React.FC = () => {
       subtitle: "Convert more leads with strategic follow-up",
       bullets: [
         {
-          title: "No more \"just checking in\" emails",
-          description: "Follow-ups are strategic, timely, and tailored.",
+          title: "No more generic emails",
+          description: "Every message is contextual, personalized, and built for reply.",
           icon: Lock
         },
         {
           title: "Seamless handoff to your sales team",
-          description: "Qualified leads go straight to closers.",
+          description: "Qualified leads are routed directly with full context — no gaps.",
           icon: Zap
         },
         {
-          title: "Proven system for turning conversations into contracts",
-          description: "No leads left behind.",
+          title: "A proven system for turning conversations into contracts",
+          description: "So no deal gets forgotten, and no pipeline gets left behind.",
           icon: DollarSign
         }
       ],
