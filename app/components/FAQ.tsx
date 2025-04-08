@@ -11,23 +11,23 @@ const FAQ: React.FC = () => {
           {[
             { 
               question: "How does this help me get more ROI from expos?", 
-              answer: "We provide a structured system to book meetings, capture leads, and automate follow-ups, so no opportunities slip through the cracks."
+              answer: "We turn one-off conversations into repeatable sales processes — built to convert, not collect."
             },
             { 
               question: "Do my sales reps have to log data manually?", 
-              answer: "No. Our system captures, organizes, and syncs leads in real-time, eliminating busywork."
+              answer: "No. Our capture tools do the work automatically — synced straight to your CRM."
             },
             { 
               question: "What happens before the event?", 
-              answer: "We identify top prospects, warm them up, and schedule meetings before you arrive."
+              answer: "We help you identify decision-makers and lock in qualified meetings so your calendar is full before you even arrive."
             },
             { 
               question: "How does this compare to using a CRM?", 
-              answer: "A CRM stores data. Our system actively drives meetings, sales conversations, and follow-ups."
+              answer: "Your CRM is where deals are tracked. We’re the system that gets them there — with context, structure, and velocity."
             },
             { 
               question: "Is this right for my industry or company size?", 
-              answer: "If expos are part of your sales strategy, this approach works-whether you're a startup or an established business."
+              answer: "If you’re in B2B and your deals are $50k+, this is likely one of the highest-leverage systems you can install."
             }
           ].map((item, index) => (
             <AccordionItem key={index} value={`item-${index}`}>
